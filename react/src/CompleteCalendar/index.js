@@ -72,7 +72,7 @@ const CompleteCalendar = ({}) => {
   }
 
   const handleDateSelect = (selectInfo) => {
-    let title = prompt('Please enter a new title for your event')
+    let title = prompt('Por favor, adicione um novo título ao seu evento')
     let calendarApi = selectInfo.view.calendar
 
     calendarApi.unselect() // limpa a seleção de data
@@ -107,6 +107,7 @@ const CompleteCalendar = ({}) => {
       {renderSidebar()}
       <S.CalendarSection>
         <FullCalendar
+          locale={'pt-br'}
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
