@@ -6,7 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from '../event-utils'
 import * as S from './styles'
 
-const CompleteCalendar = ({}) => {
+const FullEventsCalendar = ({}) => {
   const [weekendsVisible, setWeekendsVisible] = useState(true)
   const [currentEvents, setCurrentEvents] = useState([])
 
@@ -136,4 +136,4 @@ const CompleteCalendar = ({}) => {
   )
 }
 
-export default CompleteCalendar
+export default FullEventsCalendar

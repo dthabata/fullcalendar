@@ -7,28 +7,28 @@ module.exports = {
   devtool: 'source-map',
   entry: './src/main.jsx',
   resolve: {
-    extensions: [ '.js', '.jsx' ]
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader' // will use .babelrc
+        use: 'babel-loader', // will use .babelrc
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   output: {
     filename: 'main.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: packageMeta.title
-    })
-  ]
+      title: packageMeta.title,
+    }),
+  ],
 }
